@@ -7,6 +7,7 @@ export type Language = 'es' | 'en' | 'fr' | 'ca'
 const translations = {
   es: {
     language: 'Idioma',
+    navLabel: 'Navegación principal',
     nav: ['Venta', 'Alquiler', 'Relocation', 'Nosotros'],
     region: 'Barcelona · Madrid',
     heroKicker: 'Barcelona & Madrid · Real Estate & Relocation',
@@ -19,6 +20,7 @@ const translations = {
   },
   en: {
     language: 'Language',
+    navLabel: 'Main navigation',
     nav: ['For sale', 'For rent', 'Relocation', 'About us'],
     region: 'Barcelona · Madrid',
     heroKicker: 'Barcelona & Madrid · Real Estate & Relocation',
@@ -31,6 +33,7 @@ const translations = {
   },
   fr: {
     language: 'Langue',
+    navLabel: 'Navigation principale',
     nav: ['À vendre', 'À louer', 'Relocation', 'À propos'],
     region: 'Barcelone · Madrid',
     heroKicker: 'Barcelone & Madrid · Immobilier & Relocation',
@@ -43,6 +46,7 @@ const translations = {
   },
   ca: {
     language: 'Idioma',
+    navLabel: 'Navegació principal',
     nav: ['Venda', 'Lloguer', 'Relocation', 'Nosaltres'],
     region: 'Barcelona · Madrid',
     heroKicker: 'Barcelona & Madrid · Immobiliària i Relocation',

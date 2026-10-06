@@ -55,7 +55,7 @@ export function Navbar() {
           : 'border-b border-transparent bg-transparent py-5 md:py-7',
       )}
     >
-      <nav aria-label="Principal" className="mx-auto flex max-w-[1440px] items-center justify-between px-5 md:px-10">
+      <nav aria-label={t.navLabel} className="mx-auto flex max-w-[1440px] items-center justify-between px-5 md:px-10">
         <a href="#top" aria-label="Coconut Luxury Flats, inicio" className="relative z-10 -my-2 py-2">
           <Logo tone={light ? 'light' : 'dark'} />
         </a>
@@ -78,9 +78,6 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <p className={cn('font-sans text-[0.7rem] font-medium uppercase tracking-[0.26em] transition-colors duration-500', light ? 'text-ivory/80' : 'text-muted-foreground')}>
-            {t.region}
-          </p>
           <div className={cn('flex items-center gap-1 border-l pl-4', light ? 'border-ivory/30' : 'border-ink/20')} aria-label={t.language}>
             {LANGUAGES.map((item) => (
               <button key={item.code} type="button" onClick={() => setLanguage(item.code)} aria-pressed={language === item.code} className={cn('px-1.5 py-1 font-sans text-[0.65rem] font-semibold tracking-[0.16em] transition-colors', language === item.code ? (light ? 'text-ivory' : 'text-ink') : (light ? 'text-ivory/45 hover:text-ivory' : 'text-muted-foreground hover:text-ink'))}>
@@ -89,15 +86,6 @@ export function Navbar() {
             ))}
           </div>
         </div>
-
-        <p
-          className={cn(
-            'hidden font-sans text-[0.7rem] font-medium uppercase tracking-[0.26em] transition-colors duration-500 lg:block',
-            light ? 'text-ivory/80' : 'text-muted-foreground',
-          )}
-        >
-          Barcelona
-        </p>
 
         <button
           type="button"

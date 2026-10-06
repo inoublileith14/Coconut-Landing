@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import { LINKS, NAV_ITEMS } from '@/lib/site'
-import { Logo } from './logo'
 
 export function Footer() {
   return (
@@ -7,9 +7,11 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-5 pb-10 pt-20 md:px-10 md:pt-28">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Logo tone="light" />
-            <p className="mt-8 max-w-xs font-sans text-sm leading-relaxed text-ivory/60">
-              Real estate &amp; relocation in Barcelona.
+            <div className="relative h-24 w-72 overflow-hidden bg-black md:h-28 md:w-80">
+              <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-09-04%20at%2018.28.31-JcIj3LK3M5f0sEihbUb70limNGRUkD.jpeg" alt="Coconut Luxury Flats" fill sizes="320px" className="object-contain" />
+            </div>
+            <p className="mt-8 max-w-md font-sans text-sm leading-relaxed text-ivory/60">
+              Viviendas seleccionadas en venta y alquiler, con acompañamiento personalizado para encontrar tu próximo hogar en Barcelona y Madrid.
             </p>
           </div>
 
@@ -63,7 +65,7 @@ export function Footer() {
 
         <div className="mt-20 flex flex-col gap-3 border-t border-ivory/15 pt-8 font-sans text-[0.7rem] uppercase tracking-[0.24em] text-ivory/50 sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} Coconut Luxury Flats</p>
-          <p>Barcelona, España</p>
+          <p>Barcelona · Madrid · España</p>
         </div>
       </div>
     </footer>
