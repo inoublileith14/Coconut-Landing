@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 type LogoProps = {
@@ -7,17 +8,8 @@ type LogoProps = {
 
 export function Logo({ tone = 'dark', className }: LogoProps) {
   return (
-    <span
-      className={cn(
-        'inline-flex flex-col items-start leading-none transition-colors duration-500',
-        tone === 'light' ? 'text-ivory' : 'text-ink',
-        className,
-      )}
-    >
-      <span className="font-serif text-[1.65rem] font-medium tracking-[0.18em] md:text-[1.85rem]">COCONUT</span>
-      <span className="mt-1 pl-[0.1em] font-sans text-[0.58rem] font-medium tracking-[0.42em] md:text-[0.62rem]">
-        LUXURY FLATS
-      </span>
+    <span className={cn('relative block h-14 w-44 overflow-hidden bg-black md:h-16 md:w-52', className)}>
+      <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-09-04%20at%2018.28.31-JcIj3LK3M5f0sEihbUb70limNGRUkD.jpeg" alt="Coconut Luxury Flats" fill sizes="208px" className="object-contain" priority />
     </span>
   )
 }

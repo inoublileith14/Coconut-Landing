@@ -10,9 +10,11 @@ import { Neighborhoods } from '@/components/site/neighborhoods'
 import { PropertyServices } from '@/components/site/property-services'
 import { Services } from '@/components/site/services'
 
+import { LanguageProvider } from '@/lib/i18n'
+
 export default function Page() {
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <main data-page-content>
         <Hero />
@@ -26,6 +28,6 @@ export default function Page() {
         <FinalCta />
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   )
 }

@@ -1,8 +1,13 @@
+'use client'
+
 import Image from 'next/image'
+import { useLanguage } from '@/lib/i18n'
 import { LINKS } from '@/lib/site'
 import { CtaLink } from './cta-link'
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="top"
@@ -31,7 +36,7 @@ export function Hero() {
             className="animate-rise font-sans text-[0.68rem] font-semibold uppercase tracking-[0.34em] text-ivory/85 md:text-[0.72rem]"
             style={{ animationDelay: '200ms' }}
           >
-            Barcelona <span aria-hidden="true">·</span> Real Estate &amp; Relocation
+            {t.heroKicker}
           </p>
 
           <h1
@@ -39,14 +44,14 @@ export function Hero() {
             className="animate-rise mt-6 font-serif text-[3.4rem] font-light leading-[0.95] tracking-[-0.015em] text-balance sm:text-7xl lg:text-8xl xl:text-[8.5rem]"
             style={{ animationDelay: '400ms' }}
           >
-            Find your place <em className="font-light italic">in Barcelona.</em>
+            {t.heroTitle} <em className="font-light italic">{t.heroAccent}</em>
           </h1>
 
           <p
             className="animate-rise mt-7 max-w-md text-pretty font-sans text-base leading-relaxed text-ivory/85 md:text-lg"
             style={{ animationDelay: '650ms' }}
           >
-            Exceptional homes, personalized property search and relocation services across Barcelona.
+            {t.heroCopy}
           </p>
 
           <div
@@ -54,10 +59,10 @@ export function Hero() {
             style={{ animationDelay: '850ms' }}
           >
             <CtaLink href={LINKS.sale} variant="solid-light" className="sm:min-w-64">
-              Pisos en venta
+              {t.sale}
             </CtaLink>
             <CtaLink href={LINKS.rent} variant="outline-light" className="backdrop-blur-[2px] sm:min-w-64">
-              Pisos en alquiler
+              {t.rent}
             </CtaLink>
           </div>
         </div>

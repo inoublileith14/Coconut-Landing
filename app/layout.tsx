@@ -17,9 +17,9 @@ const manrope = Manrope({
   display: 'swap',
 })
 
-const title = 'Coconut Luxury Flats | Barcelona Real Estate & Relocation'
+const title = 'Coconut Luxury Flats | Barcelona & Madrid Real Estate'
 const description =
-  'Coconut Luxury Flats helps clients find exceptional homes in Barcelona through personalized property search, sales, rentals and relocation services.'
+  'Coconut Luxury Flats helps clients find exceptional homes for sale and rent in Barcelona and Madrid through personalized property search and relocation services.'
 
 export const metadata: Metadata = {
   title,

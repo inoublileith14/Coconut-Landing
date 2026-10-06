@@ -48,7 +48,9 @@
   --beige: oklch(0.86 0.032 74);
   --charcoal: oklch(0.255 0.008 60);
   --ink: oklch(0.19 0.008 55);
-  --clay: oklch(0.55 0.105 45);
+  --clay: oklch(0.58 0.12 48);
+  --coconut-gold: oklch(0.74 0.12 76);
+  --coconut-teal: oklch(0.52 0.11 183);
 
   --background: var(--ivory);
   --foreground: var(--ink);

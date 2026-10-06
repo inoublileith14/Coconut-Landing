@@ -2,13 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
-import { LINKS, NAV_ITEMS } from '@/lib/site'
+import { LANGUAGES, useLanguage } from '@/lib/i18n'
+import { LINKS } from '@/lib/site'
 import { cn } from '@/lib/utils'
 import { Logo } from './logo'
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48)
@@ -59,7 +61,7 @@ export function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-12 lg:flex">
-          {NAV_ITEMS.map((item) => (
+          {t.nav.map((label, index) => ({ label, href: ['#venta', '#alquiler', '#relocation', '#nosotros'][index] })).map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
@@ -74,6 +76,19 @@ export function Navbar() {
             </li>
           ))}
         </ul>
+
+        <div className="hidden items-center gap-5 lg:flex">
+          <p className={cn('font-sans text-[0.7rem] font-medium uppercase tracking-[0.26em] transition-colors duration-500', light ? 'text-ivory/80' : 'text-muted-foreground')}>
+            {t.region}
+          </p>
+          <div className={cn('flex items-center gap-1 border-l pl-4', light ? 'border-ivory/30' : 'border-ink/20')} aria-label={t.language}>
+            {LANGUAGES.map((item) => (
+              <button key={item.code} type="button" onClick={() => setLanguage(item.code)} aria-pressed={language === item.code} className={cn('px-1.5 py-1 font-sans text-[0.65rem] font-semibold tracking-[0.16em] transition-colors', language === item.code ? (light ? 'text-ivory' : 'text-ink') : (light ? 'text-ivory/45 hover:text-ivory' : 'text-muted-foreground hover:text-ink'))}>
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <p
           className={cn(
@@ -118,7 +133,7 @@ export function Navbar() {
         className="fixed inset-0 flex flex-col bg-ink px-5 pb-10 pt-28 text-ivory lg:hidden"
       >
         <ul className="flex flex-col border-t border-ivory/15">
-          {NAV_ITEMS.map((item, i) => (
+          {t.nav.map((label, i) => ({ label, href: ['#venta', '#alquiler', '#relocation', '#nosotros'][i] })).map((item, i) => (
             <li key={item.href} className="border-b border-ivory/15">
               <a
                 href={item.href}
