@@ -75,8 +75,8 @@ export function Neighborhoods() {
                     fill
                     sizes="(min-width: 1440px) 520px, 36vw"
                     className={cn(
-                      'object-cover transition-[opacity,transform] duration-[1200ms] ease-out',
-                      active === i ? 'scale-100 opacity-100' : 'scale-[1.06] opacity-0',
+                      'object-cover transition-opacity duration-500 ease-out',
+                      active === i ? 'opacity-100' : 'opacity-0',
                     )}
                   />
                 ))}

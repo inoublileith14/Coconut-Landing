@@ -71,7 +71,7 @@ export function Gallery() {
                   alt={item.alt}
                   fill
                   sizes={item.sizes}
-                  className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 />
               </div>
             </Reveal>

@@ -49,7 +49,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,padding] duration-700 ease-out',
+        'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,padding] duration-300 ease-out',
         solid
           ? 'border-b border-ink/10 bg-ivory/95 py-3 backdrop-blur-md'
           : 'border-b border-transparent bg-transparent py-5 md:py-7',

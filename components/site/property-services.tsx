@@ -52,7 +52,7 @@ export function PropertyServices() {
                   alt={block.alt}
                   fill
                   sizes="(min-width: 1440px) 680px, (min-width: 1024px) 48vw, 100vw"
-                  className="object-cover transition-transform duration-[1600ms] ease-out hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
                 />
               </Reveal>
 

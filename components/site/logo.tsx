@@ -14,7 +14,7 @@ export function Logo({ tone = 'dark', className }: LogoProps) {
         className,
       )}
     >
-      <span className="font-serif text-[1.65rem] font-medium tracking-[0.18em] md:text-[1.85rem]">COCONUT</span>
+      <span className="coconut-spectrum-text font-serif text-[1.65rem] font-medium tracking-[0.18em] md:text-[1.85rem]">COCONUT</span>
       <span className="mt-1 pl-[0.1em] font-sans text-[0.58rem] font-medium tracking-[0.42em] md:text-[0.62rem]">
         LUXURY FLATS
       </span>
