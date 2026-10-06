@@ -51,7 +51,7 @@ export function Navbar() {
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,padding] duration-300 ease-out',
         solid
-          ? 'border-b border-ink/10 bg-ivory/95 py-3 backdrop-blur-md'
+          ? 'border-b border-ink/10 bg-ivory/95 py-3 backdrop-blur-md before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-[linear-gradient(90deg,var(--coconut-teal),var(--coconut-blue),var(--coconut-violet),var(--clay),var(--coconut-gold))]'
           : 'border-b border-transparent bg-transparent py-5 md:py-7',
       )}
     >
@@ -66,7 +66,7 @@ export function Navbar() {
               <a
                 href={item.href}
                 className={cn(
-                  'relative py-3 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.26em] transition-colors duration-500',
+                  'relative py-3 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.26em] transition-colors duration-300',
                   'after:absolute after:inset-x-0 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-500 hover:after:scale-x-100',
                   light ? 'text-ivory' : 'text-ink',
                 )}

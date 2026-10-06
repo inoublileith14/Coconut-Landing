@@ -26,7 +26,7 @@ export function Hero() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-[linear-gradient(180deg,oklch(0.19_0.008_55/0.55)_0%,oklch(0.19_0.008_55/0.15)_35%,oklch(0.19_0.008_55/0.35)_60%,oklch(0.19_0.008_55/0.82)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(180deg,oklch(0.11_0.014_275/0.72)_0%,oklch(0.11_0.014_275/0.16)_38%,oklch(0.11_0.014_275/0.42)_66%,oklch(0.11_0.014_275/0.92)_100%)]"
         />
       </div>
 
